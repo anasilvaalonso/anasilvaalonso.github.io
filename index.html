@@ -3,313 +3,68 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ana Silva | PhD Researcher</title>
+<title>Ana M. Silva | PhD Candidate in Economics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --ink: #1a1916;
-    --ink-2: #4a4843;
-    --ink-3: #8a8880;
-    --rule: #d8d5ce;
-    --bg: #faf9f6;
-    --bg-2: #f2f0eb;
-    --accent: #2a5c8a;
-    --accent-light: #e8f0f8;
+    --ink: #1a1916; --ink-2: #3d3b38; --ink-3: #8a8880;
+    --rule: #e2ddd6; --bg: #fdfcf9; --bg-2: #f5f0e8;
+    --accent: #7c3d8f; --accent-mid: #a855c0; --accent-light: #f3e8f8;
+    --teal: #0f6e56; --teal-light: #e1f5ee;
+    --coral: #993c1d; --coral-light: #faece7;
     --serif: 'EB Garamond', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--serif);
-    background: var(--bg);
-    color: var(--ink);
-    font-size: 18px;
-    line-height: 1.75;
-  }
-
-  /* NAV */
+  body { font-family: var(--serif); background: var(--bg); color: var(--ink); font-size: 18px; line-height: 1.75; }
   nav {
-    position: sticky;
-    top: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--rule);
-    z-index: 100;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
+    position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--rule);
+    z-index: 100; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px;
   }
-
-  .nav-name {
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    color: var(--ink);
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-2);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
+  .nav-name { font-family: var(--serif); font-size: 1rem; font-weight: 500; color: var(--accent); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-
-  /* HERO */
-  #home {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 7rem 2rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .hero-eyebrow {
-    font-family: var(--sans);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    margin-bottom: 1.25rem;
-  }
-
-  h1 {
-    font-family: var(--serif);
-    font-size: 2.6rem;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.01em;
-  }
-
-  .hero-bio p {
-    color: var(--ink-2);
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-  }
-
-  .hero-bio a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-  }
-
-  .avatar-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 1rem;
-  }
-
-  .avatar {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    background: var(--bg-2);
-    border: 1px solid var(--rule);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-size: 3.5rem;
-    color: var(--ink-3);
-    letter-spacing: -0.02em;
-  }
-
-  .avatar-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    width: 100%;
-  }
-
-  .avatar-links a {
-    font-family: var(--sans);
-    font-size: 0.8rem;
-    color: var(--ink-2);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.75rem;
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    transition: background 0.2s, color 0.2s;
-  }
-
-  .avatar-links a:hover {
-    background: var(--accent-light);
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  /* DIVIDER */
-  .section-rule {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    border: none;
-    border-top: 1px solid var(--rule);
-  }
-
-  /* SECTIONS */
-  section {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-
-  .section-label {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--rule);
-  }
-
-  h2 {
-    font-family: var(--serif);
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-  }
-
-  /* RESEARCH */
-  .research-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .research-card {
-    border-left: 2px solid var(--accent);
-    padding: 0 0 0 1.5rem;
-  }
-
-  .research-card-title {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.35rem;
-    color: var(--ink);
-  }
-
-  .research-card-meta {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    color: var(--ink-3);
-    letter-spacing: 0.04em;
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-  }
-
-  .research-card p {
-    font-size: 0.98rem;
-    color: var(--ink-2);
-  }
-
-  .interests-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 2rem;
-  }
-
-  .interest-tag {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    padding: 0.35rem 0.9rem;
-    border: 1px solid var(--rule);
-    border-radius: 100px;
-    color: var(--ink-2);
-    background: var(--bg-2);
-  }
-
-  /* CONTACT */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .contact-item {
-    padding: 1.5rem;
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    background: var(--bg);
-  }
-
-  .contact-item-label {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    margin-bottom: 0.5rem;
-  }
-
-  .contact-item-value {
-    font-size: 1rem;
-    color: var(--ink);
-  }
-
-  .contact-item-value a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-  }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--rule);
-    padding: 2rem;
-    text-align: center;
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    color: var(--ink-3);
-  }
-
-  /* RESPONSIVE */
+  #home { max-width: 860px; margin: 0 auto; padding: 7rem 2rem 5rem; display: grid; grid-template-columns: 1fr 220px; gap: 4rem; align-items: start; }
+  .hero-eyebrow { font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 1.25rem; font-weight: 500; }
+  h1 { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
+  .hero-bio p { color: var(--ink-2); margin-bottom: 1rem; font-size: 1.05rem; }
+  .hero-bio a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .avatar-col { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 1rem; }
+  .avatar { width: 190px; height: 190px; border-radius: 50%; background: var(--accent-light); border: 2px solid #d4a8e8; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 3rem; color: var(--accent); }
+  .avatar-links { display: flex; flex-direction: column; gap: 0.4rem; width: 100%; }
+  .avatar-links a { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-2); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.75rem; border: 1px solid var(--rule); border-radius: 4px; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+  .avatar-links a:hover { background: var(--accent-light); color: var(--accent); border-color: #d4a8e8; }
+  .section-rule { max-width: 860px; margin: 0 auto; border: none; border-top: 1px solid var(--rule); }
+  section { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+  .section-label { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 2rem; font-weight: 500; display: flex; align-items: center; gap: 1rem; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+  .research-group-title { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 2.5rem 0 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+  .research-grid { display: flex; flex-direction: column; gap: 2rem; }
+  .research-card { border-left: 3px solid var(--accent-mid); padding: 0 0 0 1.5rem; }
+  .research-card.forthcoming { border-left-color: var(--teal); }
+  .research-card.wip { border-left-color: var(--coral); }
+  .research-card-title { font-family: var(--serif); font-size: 1.08rem; font-weight: 500; margin-bottom: 0.3rem; color: var(--ink); line-height: 1.4; }
+  .research-card-meta { font-family: var(--sans); font-size: 0.76rem; color: var(--ink-3); letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+  .journal-badge { display: inline-block; font-family: var(--sans); font-size: 0.72rem; padding: 0.15rem 0.6rem; border-radius: 100px; margin-left: 0.4rem; font-weight: 500; }
+  .badge-teal { background: var(--teal-light); color: var(--teal); }
+  .badge-purple { background: var(--accent-light); color: var(--accent); }
+  .research-card-coauthors { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-3); font-style: italic; margin-bottom: 0.6rem; }
+  .abstract-toggle { font-family: var(--sans); font-size: 0.78rem; color: var(--accent); background: none; border: none; cursor: pointer; padding: 0; margin-top: 0.5rem; display: block; text-decoration: underline; text-underline-offset: 2px; }
+  .abstract-text { display: none; margin-top: 0.75rem; font-size: 0.93rem; color: var(--ink-2); line-height: 1.7; border-top: 1px solid var(--rule); padding-top: 0.75rem; }
+  .abstract-text.open { display: block; }
+  .interests-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 3rem; }
+  .interest-tag { font-family: var(--sans); font-size: 0.78rem; padding: 0.35rem 0.9rem; border: 1px solid #d4a8e8; border-radius: 100px; color: var(--accent); background: var(--accent-light); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .contact-item { padding: 1.25rem 1.5rem; border: 1px solid var(--rule); border-top: 3px solid var(--accent-mid); border-radius: 8px; background: var(--bg); }
+  .contact-item-label { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.5rem; font-weight: 500; }
+  .contact-item-value { font-size: 0.98rem; color: var(--ink); }
+  .contact-item-value a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  footer { border-top: 1px solid var(--rule); padding: 2rem; text-align: center; font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); }
   @media (max-width: 680px) {
-    #home {
-      grid-template-columns: 1fr;
-      padding-top: 3rem;
-    }
-    .avatar-col { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+    #home { grid-template-columns: 1fr; padding-top: 3rem; }
     .avatar { width: 100px; height: 100px; font-size: 2rem; }
     h1 { font-size: 2rem; }
     .contact-grid { grid-template-columns: 1fr; }
@@ -321,7 +76,7 @@
 <body>
 
 <nav>
-  <span class="nav-name">Ana Silva</span>
+  <span class="nav-name">Ana M. Silva</span>
   <ul class="nav-links">
     <li><a href="#home">About</a></li>
     <li><a href="#research">Research</a></li>
@@ -329,23 +84,18 @@
   </ul>
 </nav>
 
-<!-- HERO / BIO -->
 <section id="home">
   <div class="hero-text">
     <p class="hero-eyebrow">PhD Candidate in Economics</p>
-    <h1>Ana Silva</h1>
+    <h1>Ana M. Silva</h1>
     <div class="hero-bio">
-      <p>
-        Welcome. I am a PhD candidate in Economics at the <a href="#">Universidad de Alcalá</a>, supported by the Comunidad de Madrid through the <em>Becas de Formación del Profesorado Universitario</em> and the <em>Becas de Formación del Personal Investigador</em>.
-      </p>
-      <p>
-        My research lies in Labor Economics, Demography, Immigration, and Public Policy. I am especially interested in the evaluation of labor market reforms and their effects on workers and families.
-      </p>
+      <p>Welcome. I am a PhD candidate in Economics at the <a href="https://www.uah.es">Universidad de Alcalá</a>, supported by the Comunidad de Madrid through the <em>Predoctoral Research Training Fellowships</em> (Formación del Profesorado Universitario and Formación del Personal Investigador).</p>
+      <p>I have been a Visiting Researcher at <a href="https://www.sdsu.edu">San Diego State University</a> and at the <a href="https://www.ucmerced.edu">University of California, Merced</a>, under the supervision of <a href="#">Catalina Amuedo-Dorantes</a>.</p>
+      <p>My research lies in Labor Economics, Demography, Immigration, and Public Policy. I am especially interested in the evaluation of labor market reforms and their distributional effects on workers and families.</p>
     </div>
   </div>
-
   <div class="avatar-col">
-    <div class="avatar">AS</div>
+    <div class="avatar">AMS</div>
     <div class="avatar-links">
       <a href="#">↓ Curriculum vitae</a>
       <a href="#research">Research</a>
@@ -356,30 +106,58 @@
 
 <hr class="section-rule" />
 
-<!-- RESEARCH -->
 <section id="research">
   <p class="section-label">Research</p>
 
+  <p class="research-group-title">Accepted &amp; forthcoming</p>
+  <div class="research-grid">
+
+    <div class="research-card forthcoming">
+      <p class="research-card-meta">Forthcoming <span class="journal-badge badge-teal">Humanities and Social Sciences Communications</span></p>
+      <p class="research-card-title">Evaluating the impact of the large 2019 increase in the Spanish minimum wage on job retention and employment</p>
+      <p class="research-card-coauthors">with José María Arranz &amp; Carlos García-Serrano</p>
+      <button class="abstract-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide abstract':'Show abstract'">Show abstract</button>
+      <div class="abstract-text">This study investigates the impact of a substantial 22.3% increase in Spain's national minimum wage, implemented on January 1, 2019, on job retention and employment. Using individual administrative data and applying a difference-in-differences methodology with inverse probability weighting, the analysis finds no adverse effects of the minimum wage increase on job retention within the same firm or on overall employment permanence. Notably, the findings indicate modest positive effects on employment retention in low-wage regions and among full-time and temporary employees, though these effects are very short-lived. The findings align with theoretical frameworks suggesting that minimum wage increases may not necessarily lead to job losses, and they resonate with broader literature indicating neutral employment effects, especially for lower-income groups.</div>
+    </div>
+
+    <div class="research-card forthcoming">
+      <p class="research-card-meta">Forthcoming <span class="journal-badge badge-teal">International Labour Review</span></p>
+      <p class="research-card-title">The impact of the minimum wage on gross employment flows: An analysis at province level in Spain</p>
+      <p class="research-card-coauthors">with José María Arranz &amp; Carlos García-Serrano</p>
+      <button class="abstract-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide abstract':'Show abstract'">Show abstract</button>
+      <div class="abstract-text">This study investigates the effect of the minimum wage on gross employment flows, focusing on hiring and job separations, as well as net employment outcomes. Using aggregate data from an administrative data source covering Spanish provinces from 2015 to 2023, we find a significant negative effect of the minimum wage on hires and separations in provinces where a larger share of minimum wage earners exists. However, the net employment effect, although positive, is close to zero. Furthermore, a rise in the incidence of the minimum wage leads to an increase in hiring and separations among part-time workers, while it reduces them among full-time workers. The effects, although statistically significant, are small and economically negligible.</div>
+    </div>
+
+  </div>
+
+  <p class="research-group-title">Working papers</p>
   <div class="research-grid">
 
     <div class="research-card">
+      <p class="research-card-meta">Revise &amp; resubmit <span class="journal-badge badge-purple">International Journal of Manpower</span></p>
+      <p class="research-card-title">Unemployment benefits and job finding: Evidence from Spain's policy reforms across the business cycle</p>
+      <p class="research-card-coauthors">with José María Arranz &amp; Carlos García-Serrano</p>
+      <button class="abstract-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide abstract':'Show abstract'">Show abstract</button>
+      <div class="abstract-text">This paper examines how unemployment insurance (UI) generosity affects unemployment duration by exploiting two reforms implemented in Spain under contrasting macroeconomic conditions. In 2012, the replacement rate was reduced after six months of benefit receipt, whereas in 2023 it was increased. Using universe-level administrative data from the Spanish Public Employment Service, we estimate causal survival models to identify the impact of changes in benefit generosity on unemployment duration and to explore heterogeneity by potential benefit duration and benefit level. The results show that the 2012 reform reduced aggregate benefit duration by 25.6%, while the 2023 increase led to a modest 6.5% extension, highlighting the asymmetric sensitivity of job search behaviour to benefit cuts versus increases across different phases of the business cycle. Responses are heterogeneous: individuals with medium-to-high benefits and shorter entitlement durations react more strongly to changes in generosity.</div>
+    </div>
+
+    <div class="research-card">
       <p class="research-card-meta">Working paper</p>
-      <p class="research-card-title">Title of your working paper</p>
-      <p>Brief description of the paper: research question, methodology, and main findings. Replace this with your own abstract or summary.</p>
+      <p class="research-card-title">Immigrants and Spain's minimum income: Eligibility, use and dependence</p>
+      <p class="research-card-coauthors">with Catalina Amuedo-Dorantes &amp; José María Arranz</p>
+      <button class="abstract-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide abstract':'Show abstract'">Show abstract</button>
+      <div class="abstract-text">This paper examines immigrant–native differences across the full participation pipeline of Spain's <em>Ingreso Mínimo Vital</em> (IMV), a national minimum-income program introduced in 2020. Using administrative data from the 2016–2023 Spanish Personal Income Tax Panel (IRPF Panel), we reconstruct the sequential stages of IMV participation: economic eligibility, take-up, delayed access, and benefit persistence. We show that foreign-born households are substantially more likely to meet the program's eligibility criteria, with the gap relative to native households widening over time. Despite this higher need, conditional on eligibility, immigrant households are 7–10 percentage points less likely to receive the IMV. This disparity reflects barriers at the claiming stage, including informational frictions and administrative complexity. Local co-ethnic networks partly alleviate these barriers, though their effect is weaker for immigrants. These findings underscore the importance of administrative design and targeted outreach, particularly in the context of upcoming large-scale regularization processes in Spain.</div>
     </div>
 
-    <div class="research-card">
+  </div>
+
+  <p class="research-group-title">Work in progress</p>
+  <div class="research-grid">
+    <div class="research-card wip">
       <p class="research-card-meta">Work in progress</p>
-      <p class="research-card-title">Title of work in progress</p>
-      <p>Brief description of the project: the labor market reform or policy being evaluated, the identification strategy, and the context.</p>
+      <p class="research-card-title">Do more contracts mean less in-work poverty? Evaluating Spain's 2021 labour market reform</p>
+      <p class="research-card-coauthors">with José María Arranz &amp; Carlos García-Serrano</p>
     </div>
-
-    <div class="research-card">
-      <p class="research-card-meta">Work in progress</p>
-      <p class="research-card-title">Title of work in progress</p>
-      <p>Brief description of the project. Replace this placeholder with your own research once ready to share.</p>
-    </div>
-
   </div>
 
   <div class="interests-list">
@@ -395,22 +173,20 @@
 
 <hr class="section-rule" />
 
-<!-- CONTACT -->
 <section id="contact">
   <p class="section-label">Contact</p>
-
   <div class="contact-grid">
     <div class="contact-item">
-      <p class="contact-item-label">Email</p>
-      <p class="contact-item-value"><a href="mailto:ana.silva@example.edu">ana.silva@example.edu</a></p>
+      <p class="contact-item-label">Institutional email</p>
+      <p class="contact-item-value"><a href="mailto:ana.silva@uah.es">ana.silva@uah.es</a></p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-item-label">Personal email</p>
+      <p class="contact-item-value"><a href="mailto:ana.silva.alonso2@gmail.com">ana.silva.alonso2@gmail.com</a></p>
     </div>
     <div class="contact-item">
       <p class="contact-item-label">Affiliation</p>
       <p class="contact-item-value">Universidad de Alcalá</p>
-    </div>
-    <div class="contact-item">
-      <p class="contact-item-label">Funding</p>
-      <p class="contact-item-value">Comunidad de Madrid — FPU &amp; FPI</p>
     </div>
     <div class="contact-item">
       <p class="contact-item-label">Curriculum vitae</p>
@@ -420,8 +196,9 @@
 </section>
 
 <footer>
-  © 2025 Ana Silva &nbsp;·&nbsp; PhD Candidate in Economics · Universidad de Alcalá
+  © 2025 Ana M. Silva &nbsp;·&nbsp; PhD Candidate in Economics · Universidad de Alcalá
 </footer>
 
 </body>
 </html>
+
